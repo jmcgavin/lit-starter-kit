@@ -1,0 +1,35 @@
+{
+  "name": "lit-element-starter-kit",
+  "version": "0.0.0",
+  "author": "Jordan McGavin",
+  "description": "A web app starter kit using LitElement + Redux",
+  "license": "ISC",
+  "repository": "https://github.com/jmcgavin/lit-element-starter-kit",
+  "scripts": {
+    "start": "es-dev-server --app-index index.html --node-resolve --watch --open",
+    "build": "polymer build",
+    "serve": "polymer serve build/es6-bundled",
+    "lint": "standard | snazzy",
+    "lint:fix": "standard --fix"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0",
+    "pwa-helpers": "^0.9.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "2.3.0",
+    "reselect": "4.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "es-dev-server": "^2.0.2",
+    "polymer-cli": "^1.9.11",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.3"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true
+    }
+  }
+}

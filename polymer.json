@@ -1,0 +1,21 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/index.js",
+  "sources": [
+    "images/**/*"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "node_modules/@webcomponents/webcomponentsjs/**",
+    "scripts/jsmediatags.js",
+    "fonts/**"
+  ],
+  "builds": [
+    {
+      "preset": "es6-bundled",
+      "addServiceWorker": false
+    }
+  ],
+  "moduleResolution": "node",
+  "npm": true
+}
