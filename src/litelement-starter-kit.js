@@ -8,7 +8,7 @@ import { navigate } from './state/actions/app'
 import { PAGES } from './constants'
 import './components/hello-world'
 
-export class App extends connect(store)(LitElement) {
+export class LitElementStarterKit extends connect(store)(LitElement) {
   static get properties () {
     return {
       _page: { type: String }
@@ -25,6 +25,7 @@ export class App extends connect(store)(LitElement) {
   constructor () {
     super()
     this._page = PAGES.HOME
+    this.appTitle = 'LitElement Starter Kit'
   }
 
   render () {
@@ -45,7 +46,7 @@ export class App extends connect(store)(LitElement) {
    */
   updated (changedProps) {
     const activePage = this._page.charAt(0).toUpperCase() + this._page.slice(1)
-    const pageTitle = `${this.appTitle} | ${activePage}`
+    const pageTitle = `${this.appTitle}${activePage !== 'home' ? ` | ${activePage}` : ''}`
     if (changedProps.has('_page')) {
       return updateMetadata({ title: pageTitle, description: pageTitle })
     }
@@ -56,4 +57,4 @@ export class App extends connect(store)(LitElement) {
   }
 }
 
-window.customElements.define('app', App)
+window.customElements.define('litelement-starter-kit', LitElementStarterKit)
