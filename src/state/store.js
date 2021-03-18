@@ -7,9 +7,8 @@ import reducer from './reducers/app'
 // See https://github.com/zalmoxisus/redux-devtools-extension for more information.
 let compose = origCompose
 if (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
-  const stage = window.location.host.split('.')[0].split('_').pop()
   compose = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-    name: `harbour-console (${stage})`
+    serialize: true
   })
 }
 
