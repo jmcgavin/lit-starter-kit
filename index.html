@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="SpotifyScanner">
+    <base href="/">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
     <title>LitElement Starter Kit</title>
-    <meta name="description" content="">
+    <meta name="description" content="LitElement starter kit">
 
-    <link rel="icon" href="images/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="images/favicon-32.png">
 
     <!-- See https://goo.gl/OOhYW5 -->
     <link rel="manifest" href="manifest.json">
@@ -27,7 +27,7 @@
         min-height: 100vh;
         -webkit-font-smoothing: antialiased;
       }
-      html, body, app {
+      html, body, litelement-starter-kit {
         height: 100%;
         background-color: #202030;
       }
@@ -35,13 +35,18 @@
   </head>
 
   <body>
-    <app appTitle="LitElement Starter Kit"></app>
+    <litelement-starter-kit></litelement-starter-kit>
+
+    <script>
+      // Redux assumes `process.env.NODE_ENV` exists in the ES module build.
+      // https://github.com/reactjs/redux/issues/2907
+      window.process = { env: { NODE_ENV: 'production' } }
+    </script>
+
     <noscript>Please enable JavaScript to view this website.</noscript>
     
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-
-    <!-- Built with love using PWA Starter Kit -->
-    <script type="module" src="src/index.js" crossorigin></script>
+    <script type="module" src="src/litelement-starter-kit.js" crossorigin></script>
   </body>
 </html>

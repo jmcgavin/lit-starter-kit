@@ -6,9 +6,13 @@ import { installRouter } from 'pwa-helpers/router'
 import { updateMetadata } from 'pwa-helpers/metadata'
 import { navigate } from './state/actions/app'
 import { PAGES } from './constants'
-import './components/hello-world'
+import './components/lsk-app'
 
-export class App extends connect(store)(LitElement) {
+/**
+ * Root component of the app
+ * @extends LitElement
+ */
+export class LitElementStarterKit extends connect(store)(LitElement) {
   static get properties () {
     return {
       _page: { type: String }
@@ -25,11 +29,12 @@ export class App extends connect(store)(LitElement) {
   constructor () {
     super()
     this._page = PAGES.HOME
+    this.appTitle = 'LitElement Starter Kit'
   }
 
   render () {
     return html`
-      <hello-world></hello-world>
+      <lsk-app .appTitle="${this.appTitle}"></lsk-app>
     `
   }
 
@@ -45,7 +50,7 @@ export class App extends connect(store)(LitElement) {
    */
   updated (changedProps) {
     const activePage = this._page.charAt(0).toUpperCase() + this._page.slice(1)
-    const pageTitle = `${this.appTitle} | ${activePage}`
+    const pageTitle = `${this.appTitle}${activePage !== 'home' ? ` | ${activePage}` : ''}`
     if (changedProps.has('_page')) {
       return updateMetadata({ title: pageTitle, description: pageTitle })
     }
@@ -56,4 +61,4 @@ export class App extends connect(store)(LitElement) {
   }
 }
 
-window.customElements.define('app', App)
+window.customElements.define('litelement-starter-kit', LitElementStarterKit)
