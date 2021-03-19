@@ -6,8 +6,12 @@ import { installRouter } from 'pwa-helpers/router'
 import { updateMetadata } from 'pwa-helpers/metadata'
 import { navigate } from './state/actions/app'
 import { PAGES } from './constants'
-import './components/hello-world'
+import './components/lsk-app'
 
+/**
+ * Root component of the app
+ * @extends LitElement
+ */
 export class LitElementStarterKit extends connect(store)(LitElement) {
   static get properties () {
     return {
@@ -30,7 +34,7 @@ export class LitElementStarterKit extends connect(store)(LitElement) {
 
   render () {
     return html`
-      <hello-world></hello-world>
+      <lsk-app .appTitle="${this.appTitle}"></lsk-app>
     `
   }
 

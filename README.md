@@ -9,4 +9,6 @@
 - [ ] Build to GH Pages
 - [ ] Redux Toolkit
 - [ ] Material Components
+- [ ] Custom Theme
+  - https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md
 - [ ] Accessibility tests
