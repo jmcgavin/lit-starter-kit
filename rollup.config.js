@@ -6,8 +6,10 @@ import copy from 'rollup-plugin-copy'
 // Static assets will vary depending on the application
 const copyConfig = {
   targets: [
+    { src: 'node_modules/@webcomponents', dest: 'build/node_modules' },
     { src: 'images', dest: 'build' },
-    { src: 'index.html', dest: 'build' }
+    { src: 'index.html', dest: 'build' },
+    { src: 'manifest.json', dest: 'build' }
   ]
 }
 
@@ -16,7 +18,7 @@ const copyConfig = {
 const config = {
   input: 'src/litelement-starter-kit.js',
   output: {
-    dir: 'build/',
+    dir: 'build/src/',
     format: 'es'
   },
   plugins: [
