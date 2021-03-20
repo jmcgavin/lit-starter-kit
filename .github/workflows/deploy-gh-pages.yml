@@ -16,7 +16,7 @@ jobs:
           npm run build
 
       - name: Disable Jekyll for GitHub Pages
-        run: cd build && touch /build/.nojekyll
+        run: touch /build/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
