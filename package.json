@@ -23,7 +23,7 @@
     "reselect": "4.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
     "babel-eslint": "^10.1.0",
     "es-dev-server": "^2.1.0",
     "rimraf": "^3.0.2",
