@@ -4,13 +4,11 @@
 
 [![GitHub Super-Linter](https://github.com/jmcgavin/litelement-starter-kit/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-## https://jmcgavin.github.io/litelement-starter-kit/
-
 ## TODO
 
-- [ ] Build to GH Pages
+- [ ] Routing
 - [ ] Redux Toolkit
 - [ ] Material Components
 - [ ] Custom Theme
-  - https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md
+  - <https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md>
 - [ ] Accessibility tests
