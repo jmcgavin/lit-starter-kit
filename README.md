@@ -8,7 +8,7 @@
 
 ## TODO
 
-- [ ] Build to GH Pages
+- [ ] Routing
 - [ ] Redux Toolkit
 - [ ] Material Components
 - [ ] Custom Theme
