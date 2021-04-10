@@ -5,9 +5,8 @@ import { updateMetadata } from 'pwa-helpers/metadata'
 import { installRouter } from 'pwa-helpers/router'
 import { GlobalStyles } from './styles/global-styles'
 import { navigate } from './state/actions/app'
-
-import './components/my-view-home'
 import { PAGES } from './constants'
+import './components/my-view-home'
 
 /**
  * Main app component
@@ -27,7 +26,7 @@ export class LitElementStarterKit extends connect(store)(LitElement) {
         :host {
           height: 100%;
           display: grid;
-          grid-template-rows: min-content auto min-content;
+          grid-template-rows: min-content auto;
         }
         h1 {
           color: var(--mdc-theme-surface);
@@ -47,13 +46,13 @@ export class LitElementStarterKit extends connect(store)(LitElement) {
         .page[active] {
           display: block;
         }
-        a {
-          text-align: center;
-          color: var(--mdc-theme-surface);
-          margin: 12px;
-        }
       `
     ]
+  }
+
+  constructor () {
+    super()
+    this.appTitle = 'LitElement Starter Kit'
   }
 
   render () {
@@ -61,16 +60,14 @@ export class LitElementStarterKit extends connect(store)(LitElement) {
       <h1>${this.page.toUpperCase().replace('-', ' ')}</h1>
       <main>
         <my-view-home class="page" ?active="${this.page === PAGES.HOME}"></my-view-home>
-        <my-view-page-2 class="page" ?active="${this.page === PAGES.PAGE_2}"></my-view-page-2>
+        <my-view-about class="page" ?active="${this.page === PAGES.ABOUT}"></my-view-about>
         <my-view-404 class="page" ?active="${this.page === PAGES.NOT_FOUND}"></my-view-404>
       </main>
-      <a href="/foo-bar">Take me to a 404 page.</a>
     `
   }
 
   stateChanged (state) {
     this.page = state.app.page
-    this.appTitle = 'LitElement Starter Kit'
   }
 
   /**

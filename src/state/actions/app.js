@@ -7,8 +7,8 @@ export const navigate = (path, hash) => async (dispatch, getState) => {
 
   if (/^\/home$/.test(page)) {
     page = PAGES.HOME
-  } else if (/^\/page-2/.test(page)) {
-    page = PAGES.PAGE_2
+  } else if (/^\/about/.test(page)) {
+    page = PAGES.ABOUT
   } else {
     page = PAGES.NOT_FOUND
   }
@@ -21,8 +21,8 @@ const loadPage = page => async dispatch => {
     case PAGES.HOME:
       await import('../../components/my-view-home.js')
       break
-    case PAGES.PAGE_2:
-      import('../../components/my-view-page-2.js')
+    case PAGES.ABOUT:
+      import('../../components/my-view-about.js')
       break
     case PAGES.NOT_FOUND:
     default:

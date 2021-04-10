@@ -6,9 +6,8 @@
 
 ## TODO
 
-- [ ] Routing
+- [x] Routing
 - [ ] Redux Toolkit
 - [ ] Material Components
-- [ ] Custom Theme
-  - <https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md>
+- [ ] Custom Theme (<https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md>)
 - [ ] Accessibility tests

@@ -2,11 +2,10 @@ import { LitElement, html, css } from 'lit-element'
 import { GlobalStyles } from '../styles/global-styles'
 import { handleNavigation } from '../helpers/router'
 import { PAGES } from '../constants'
-
 import '@material/mwc-button'
 
 /**
- * Home view
+ * 404 view
  * @extends LitElement
  */
 export class MyView404 extends LitElement {
@@ -14,16 +13,18 @@ export class MyView404 extends LitElement {
     return [
       GlobalStyles,
       css`
-        #container {
+        #gridContainer {
           display: grid;
           height: 100%;
           grid-template-columns: max-content;
           place-content: center;
           justify-items: center;
+          gap: 24px;
         }
         h2 {
           color: var(--mdc-theme-surface);
           text-align: center;
+          margin: 0;
         }
         mwc-button {
           width: fit-content;
@@ -35,8 +36,8 @@ export class MyView404 extends LitElement {
 
   render () {
     return html`
-      <div id="container">
-        <h2>Oops. The page you are looking for cannot be found.</h2>
+      <div id="gridContainer">
+        <h2>The page you are looking for cannot be found</h2>
         <mwc-button
           title="Home"
           @click=${() => handleNavigation(PAGES.HOME)}

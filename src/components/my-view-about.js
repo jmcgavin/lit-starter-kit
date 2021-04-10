@@ -2,28 +2,29 @@ import { LitElement, html, css } from 'lit-element'
 import { GlobalStyles } from '../styles/global-styles'
 import { handleNavigation } from '../helpers/router'
 import { PAGES } from '../constants'
-
 import '@material/mwc-button'
 
 /**
- * Page 2 view
+ * About view
  * @extends LitElement
  */
-export class MyViewPage2 extends LitElement {
+export class MyViewAbout extends LitElement {
   static get styles () {
     return [
       GlobalStyles,
       css`
-        #container {
+        #gridContainer {
           display: grid;
           height: 100%;
           grid-template-columns: max-content;
           place-content: center;
           justify-items: center;
+          gap: 24px;
         }
         h2 {
           color: var(--mdc-theme-surface);
           text-align: center;
+          margin: 0;
         }
         mwc-button {
           width: fit-content;
@@ -35,8 +36,8 @@ export class MyViewPage2 extends LitElement {
 
   render () {
     return html`
-      <div id="container">
-        <h2>This is the second page.</h2>
+      <div id="gridContainer">
+        <h2>This is the about page</h2>
         <mwc-button
           title="Home"
           @click=${() => handleNavigation(PAGES.HOME)}
@@ -48,4 +49,4 @@ export class MyViewPage2 extends LitElement {
   }
 }
 
-window.customElements.define('my-view-page-2', MyViewPage2)
+window.customElements.define('my-view-about', MyViewAbout)

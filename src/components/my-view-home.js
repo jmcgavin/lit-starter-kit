@@ -2,7 +2,6 @@ import { LitElement, html, css } from 'lit-element'
 import { GlobalStyles } from '../styles/global-styles'
 import { handleNavigation } from '../helpers/router'
 import { PAGES } from '../constants'
-
 import '@material/mwc-button'
 
 /**
@@ -14,19 +13,29 @@ export class MyViewHome extends LitElement {
     return [
       GlobalStyles,
       css`
-        #container {
+        #gridContainer {
           display: grid;
           height: 100%;
           grid-template-columns: max-content;
           place-content: center;
           justify-items: center;
+          gap: 24px;
         }
         h2 {
           color: var(--mdc-theme-surface);
           text-align: center;
+          margin: 0;
         }
         mwc-button {
           width: fit-content;
+        }
+        a {
+          text-align: center;
+          color: var(--mdc-theme-surface);
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
         }
       `
     ]
@@ -34,14 +43,15 @@ export class MyViewHome extends LitElement {
 
   render () {
     return html`
-      <div id="container">
-        <h2>This is the homepage.</h2>
+      <div id="gridContainer">
+        <h2>This is the homepage of LitElement Starter Kit</h2>
         <mwc-button
-          title="Page 2"
-          @click=${() => handleNavigation(PAGES.PAGE_2)}
+          title="About"
+          @click=${() => handleNavigation(PAGES.ABOUT)}
           raised>
-            Go to Page Two
+            Go to About
         </mwc-button>
+        <a href="/foo-bar">Take me to a 404 page</a>
       </div>
     `
   }
