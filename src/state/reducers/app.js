@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
     case UPDATE_PAGE:
       return {
         ...state,
-        page: action.page
+        page: action.payload
       }
     default:
       return state

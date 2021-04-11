@@ -4,7 +4,7 @@
 [![Dependencies](https://david-dm.org/jmcgavin/litelement-starter-kit.svg)](https://github.com/jmcgavin/litelement-starter-kit/blob/master/package.json)
 [![GitHub Super-Linter](https://github.com/jmcgavin/litelement-starter-kit/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-A simple webapp starter kit that leverages LitElement to create fast, lightweight web components and Redux for state management.
+A simple webapp template that leverages LitElement for creating fast, lightweight web components and Redux for state management.
 
 ## Getting started
 
@@ -19,6 +19,14 @@ npm install
 ```bash
 npm start
 ```
+
+You can also generate and serve a static build
+
+```bash
+npm run build && npm run serve
+```
+
+This will create an optimized ES6 bundle for modern browsers in the `/dist` directory and then serve it.
 
 ## To-dos
 

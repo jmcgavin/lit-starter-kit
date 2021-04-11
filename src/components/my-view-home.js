@@ -30,9 +30,13 @@ export class MyViewHome extends LitElement {
           width: fit-content;
         }
         a {
-          text-align: center;
           color: var(--mdc-theme-surface);
           text-decoration: none;
+          text-align: center;
+          position: absolute;
+          bottom: 12px;
+          left: 0;
+          right: 0;
         }
         a:hover {
           text-decoration: underline;
@@ -51,8 +55,8 @@ export class MyViewHome extends LitElement {
           raised>
             Go to About
         </mwc-button>
-        <a href="/foo-bar">Take me to a 404 page</a>
       </div>
+      <a href="/foo-bar">Take me to a 404 page</a>
     `
   }
 }

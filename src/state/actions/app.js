@@ -1,8 +1,8 @@
 import { UPDATE_PAGE } from './types'
 import { PAGES } from '../../constants'
 
-export const navigate = (path, hash) => async (dispatch, getState) => {
-  // Extract the page name from path.
+export const navigate = path => async (dispatch, getState) => {
+  // Extract the page name from path
   let page = path === '/' ? '/home' : path
 
   if (/^\/home$/.test(page)) {
@@ -35,6 +35,6 @@ const loadPage = page => async dispatch => {
 const updatePage = page => {
   return {
     type: UPDATE_PAGE,
-    page
+    payload: page
   }
 }
