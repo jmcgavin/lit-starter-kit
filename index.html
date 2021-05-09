@@ -5,8 +5,8 @@
     <base href="/">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>LitElement Starter Kit</title>
-    <meta name="description" content="LitElement starter kit">
+    <title>Lit Starter Kit</title>
+    <meta name="description" content="Lit starter kit">
 
     <link rel="shortcut icon" sizes="32x32" href="images/favicon.svg">
 
@@ -36,7 +36,7 @@
   </head>
 
   <body>
-    <litelement-starter-kit></litelement-starter-kit>
+    <lit-starter-kit></lit-starter-kit>
 
     <script>
       // Redux assumes `process.env.NODE_ENV` exists in the ES module build.
@@ -48,6 +48,7 @@
     
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="src/index.js" crossorigin></script>
   </body>
 </html>

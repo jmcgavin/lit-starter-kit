@@ -12,7 +12,7 @@ import './components/my-view-home'
  * Main app component
  * @extends LitElement
  */
-export class LitElementStarterKit extends connect(store)(LitElement) {
+export class LitStarterKit extends connect(store)(LitElement) {
   static get properties () {
     return {
       page: { type: String }
@@ -52,7 +52,7 @@ export class LitElementStarterKit extends connect(store)(LitElement) {
 
   constructor () {
     super()
-    this.appTitle = 'LitElement Starter Kit'
+    this.appTitle = 'Lit Starter Kit'
   }
 
   render () {
@@ -89,4 +89,4 @@ export class LitElementStarterKit extends connect(store)(LitElement) {
   }
 }
 
-window.customElements.define('litelement-starter-kit', LitElementStarterKit)
+window.customElements.define('lit-starter-kit', LitStarterKit)

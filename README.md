@@ -1,10 +1,10 @@
-# LitElement Starter Kit
+# Lit Starter Kit
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Dependencies](https://david-dm.org/jmcgavin/litelement-starter-kit.svg)](https://github.com/jmcgavin/litelement-starter-kit/blob/master/package.json)
-[![GitHub Super-Linter](https://github.com/jmcgavin/litelement-starter-kit/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![Dependencies](https://david-dm.org/jmcgavin/lit-starter-kit.svg)](https://github.com/jmcgavin/lit-starter-kit/blob/master/package.json)
+[![GitHub Super-Linter](https://github.com/jmcgavin/lit-starter-kit/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-A simple webapp template that leverages LitElement for creating fast, lightweight web components and Redux for state management.
+A simple webapp template that leverages  for creating fast, lightweight web components and Redux for state management.
 
 ## Getting started
 
