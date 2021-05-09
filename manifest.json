@@ -1,7 +1,7 @@
 {
-  "name": "LitElement Starter Kit",
-  "short_name": "LitElement Starter Kit",
-  "description": "A web app starter kit using LitElement and Redux",
+  "name": "Lit Starter Kit",
+  "short_name": "Lit Starter Kit",
+  "description": "A web app starter kit using Lit and Redux",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#212121",

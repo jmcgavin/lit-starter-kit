@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit-element'
+import { LitElement, html, css } from 'lit'
 import { GlobalStyles } from '../styles/global-styles'
 import { handleNavigation } from '../helpers/router'
 import { PAGES } from '../constants'

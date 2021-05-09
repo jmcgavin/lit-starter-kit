@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit-element'
+import { LitElement, html, css } from 'lit'
 import { GlobalStyles } from '../styles/global-styles'
 import { handleNavigation } from '../helpers/router'
 import { PAGES } from '../constants'
@@ -48,7 +48,7 @@ export class MyViewHome extends LitElement {
   render () {
     return html`
       <div id="gridContainer">
-        <h2>This is the homepage of LitElement Starter Kit</h2>
+        <h2>This is the homepage of Lit Starter Kit</h2>
         <mwc-button
           title="About"
           @click=${() => handleNavigation(PAGES.ABOUT)}
