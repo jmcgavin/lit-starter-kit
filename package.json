@@ -17,7 +17,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^11.2.1",
     "@web/dev-server": "^0.1.17",
-    "@web/test-runner": "^0.13.4",
+    "@web/test-runner": "^0.13.11",
     "babel-eslint": "^10.1.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.47.0",
