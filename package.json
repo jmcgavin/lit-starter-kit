@@ -28,7 +28,7 @@
     "standard": "^16.0.3"
   },
   "dependencies": {
-    "@material/mwc-button": "^0.21.0",
+    "@material/mwc-button": "^0.23.0",
     "lit": "^2.0.0-rc.2",
     "pwa-helpers": "^0.9.1",
     "redux": "^4.1.0",
