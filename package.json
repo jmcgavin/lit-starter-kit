@@ -32,7 +32,7 @@
     "lit": "^2.0.0-rc.2",
     "pwa-helpers": "^0.9.1",
     "redux": "^4.1.0",
-    "redux-thunk": "2.3.0",
+    "redux-thunk": "2.4.1",
     "reselect": "4.0.0"
   },
   "standard": {
